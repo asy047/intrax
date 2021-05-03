@@ -1,0 +1,314 @@
+@charset "utf-8";
+@import url(fonts.css);
+
+body {
+	font-family: "Noto Sans KR",sans-serif;
+	color: #333;
+	height: 2000px;
+}
+
+/*common*/
+.mt10 {margin-top: 10px}
+.mt15 {margin-top: 15px}
+.mt20 {margin-top: 20px}
+.mt25 {margin-top: 25px}
+.mt30 {margin-top: 30px}
+.mt40 {margin-top: 40px}
+.mt50 {margin-top: 50px}
+.mb10 {margin-bottom: 10px;}
+.mb15 {margin-bottom: 15px;}
+.mb20 {margin-bottom: 20px;}
+.mb25 {margin-bottom: 25px;}
+.mb30 {margin-bottom: 30px;}
+.mb40 {margin-bottom: 40px;}
+.mb50 {margin-bottom: 50px;}
+.fl {float: left;}
+.fr	{float: right;}
+
+/*container*/
+#container {
+	position: relative;
+	height: 100vh;
+	background: url(../img/mv.jpg) no-repeat center / cover;
+}
+
+/*header*/
+#header {
+	position: fixed;
+	left: 0;
+	width: 100%;
+	padding: 15px 30px;
+	box-sizing: border-box;
+	z-index: 100;
+	transition: .3s;
+}
+#header .btn-nav {
+	display: block;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 5px 8px;
+	transition: all .2s;
+}
+#header .user-nav .util {
+	float: left;
+	font-size: 14px;
+}
+#header .user-nav strong {
+	margin-right: 15px;
+	color: #fff;
+}
+#header .user-nav .tnb {
+	position: absolute;
+	top: 15px; right: 30px;
+}
+#header .user-nav .tnb li {
+	float: left;
+	margin: 0 4px;
+}
+#header .user-nav .btn-nav {display: inline-block;}
+#header .user-nav .btn-nav.btn-counsel:hover {background: rgba(59, 178, 82, 0.7)}
+#header .user-nav .btn-nav.btn-intern:hover {background: rgba(21, 172, 149, 0.7)}
+#header .user-nav .btn-nav.btn-exchange:hover {background: rgba(59, 155, 178, 0.7)}
+#header .user-nav .btn-nav.btn-aupair:hover {background: rgba(178, 59, 164, 0.7)}
+#header .bot-nav .logo {float: left; margin-top: 20px;}
+#header .bot-nav .btnMenu {
+	float: right;
+	display: block;
+	width: 32px;
+	height: 32px;
+	margin-top: 30px;
+}
+#header .bot-nav .btnMenu img {width: 100%;}
+
+/*sideMenu*/
+.sideMenu {
+	position: fixed;
+	top: 0; right: -300px;
+	height: 100vh;
+	width: 280px;
+	padding: 30px;
+	background: #fff;
+	box-sizing: border-box;
+	z-index: 1000;
+}
+.sideMenu .btnClose {
+	cursor: pointer;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+}
+.sideMenu .gnb li a {
+	display: block;
+	padding: 10px 0;
+	font-size: 18px;
+	font-weight: bold;
+	color: #222;
+}
+.sideMenu .side-tnb {margin-top: 50px;}
+.sideMenu .side-tnb a {
+	display: block;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	border: 1px solid #222;
+	margin-bottom: 10px;
+}
+/*title*/
+#container .smallTitle {
+	position: absolute;
+	top: 22%; left: 6%;
+	font-size: 12px;
+	color: #ddd;
+	letter-spacing: 15px;
+	line-height: 2.6;
+}
+#container .mainTitle {
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 40px;
+	color: #fff;
+	font-weight: 700;
+}
+#container .arrow {
+	position: absolute;
+	bottom: 50px; left: 50%;
+	transform: translateX(-50%);
+	animation: scroll 0.4s infinite alternate;
+}
+@keyframes scroll {
+	0% {bottom: 65px}
+}
+/*transition은 event가 있어야하지만 animaiton은 자기 혼자 작동할 수 있다.*/
+
+/*fixed header*/
+#header.on {
+	height: 80px;
+	background: #fff;
+}
+#header.on .util strong {display: none;}
+#header.on .util > a {
+	position: absolute;
+	top: 50%; left: 200px;
+	transform: translateY(-50%);
+	color: #222;
+	border-color: #222;
+}
+#header.on .util > a:hover {color: #fff;}
+#header.on .logo {margin-top: 0;}
+#header.on .btn-counsel {margin-top: 5px;}
+#header.on .user-nav .tnb {
+	top: 50%; right: 100px;
+	transform: translateY(-50%);
+}
+#header.on .user-nav .tnb a {
+	color: #222;
+	border-color: #222;
+}
+#header.on .user-nav .tnb a:hover {color: #fff;}
+#header.on .bot-nav .btnMenu {margin-top: 12px;}
+
+
+/*section#program*/
+.inner {width: 1160px; margin: 0 auto;}
+#programArea {
+	padding: 70px 0 60px;
+	background: #eee;
+}
+#programArea h2 {
+	display: inline-block;
+	font-size: 28px;
+	color: #222;
+	padding: 0 30px 12px 0;
+	border-bottom: 2px solid #222;
+	font-weight: 700;
+}
+#programArea .desc {font-size: 18px;}
+#programArea h3 {
+	font-weight: 700;
+	font-size: 26px;
+	color: #444;
+}
+#programArea .programText {
+	padding-top: 80px;
+	width: 40%;
+	box-sizing: border-box;
+}
+#programArea h3 > span {
+	display: block;
+	font-size: 15px;
+}
+#programArea img {
+	width: 55%;
+}
+#programArea .program {margin-bottom: 180px;}
+#programArea .btn-more {
+	display: inline-block;
+	margin-top: 40px;
+	border: 1px solid #222;
+	color: #222;
+	padding: 10px 35px;
+	transition: .3s .1s;
+}
+#programArea .btn-more:hover {
+	background: rgba(0, 0, 0, 0.26);
+}
+
+/*about*/
+#about {padding: 70px 0 40px;}
+#about .aboutList {
+	margin-left: -30px;
+}
+#about .aboutList li {
+	float: left;
+	width: 565px;
+	margin: 0 0 40px 30px;
+}
+#about .aboutList .aboutPic {
+	position: relative;
+	overflow: hidden;
+	height: 360px;
+	width: 100%;
+}
+#about .aboutList .aboutPic img {position: absolute; top: 0; left: 0;  width: 100%; transition: all .6s}
+#about .aboutList .aboutPic img:hover {
+	transform: scale(1.1)
+}
+#about .aboutList .aboutPic .text {
+	position: absolute;
+	bottom: -120px; left: 0px;
+	padding: 20px;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	font-size: 18px;
+	color: #fff;
+	transition: .3s;
+	z-index: 10;
+	box-sizing: border-box;
+}
+#about .aboutList .aboutPic:hover .text {bottom: 0;}
+
+/*intrax*/
+#intrax {padding: 70px 0 60px;}
+#intrax h2 {text-align: center; margin-bottom: 80px;}
+#intrax li {
+	width: 50%;
+	height: 360px;
+	overflow: hidden;
+}
+#intrax li img {width: 100%;}
+#intrax .textGroup {
+	padding: 120px 50px;
+	background: #eee;
+	box-sizing: border-box;
+}
+#intrax .btnArea {margin-top: 50px;}
+#intrax .btnArea > a {
+	display: inline-block;
+	padding: 10px 15px;
+	border: 1px solid #ccc;
+	color: #222;
+}
+/*공지사항*/
+#notice {padding: 70px 0 60px}
+#notice h2 {
+	font-size: 28px;
+	font-weight: 700;
+	text-align: center;
+	color: #222;
+	margin-bottom: 70px;
+}
+#notice li {
+	float: left;
+	width: 31.3333%;
+	margin-right: 3%;
+}
+#notice li:last-child {margin-right: 0;}
+#notice li .noticePic {
+	height: 180px;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+#notice li .noticePic img {width: 100%;}
+#notice li strong,
+#notice li .listView {
+	display: block;
+	white-space: nowrap;
+	/*텍스트가 자동개행되지 않고 한줄로 입력되게 하는 속성*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+#notice li .listView {font-size: 16px; margin-bottom: 10px;}
+#notice li time {}
+#notice .btnMore {
+	margin-top: 100px;
+	text-align: center;
+}
+#notice .btnMore > a {
+	display: inline-block;
+	border: 1px solid #222;
+	color: #222;
+	padding: 10px 40px;
+	font-weight: 500;
+}
